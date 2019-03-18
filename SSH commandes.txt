@@ -1,5 +1,0 @@
-SSH : 
-
-Commande pour copier clef public sur le serveur distant :
-
-ssh-copy-id -i ~/.ssh/id_dsa user@10.4.37.104
