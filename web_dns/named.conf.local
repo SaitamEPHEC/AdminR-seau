@@ -1,1 +1,8 @@
 // a config
+view external {
+	match-clients {any;};
+	zone "wt6.ephec-ti.be" {
+		type master;
+		file "etc/bind/db.wt6.ephec-ti.be";
+	};	
+};
