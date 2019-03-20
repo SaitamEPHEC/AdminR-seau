@@ -1,3 +1,8 @@
+acl "trusted"{
+	51.77.147.126 ; dns maitre
+	51.77.147.119 ; dns slave
+	localhost ;
+}
 options {
         directory "/var/cache/bind";
 
@@ -24,7 +29,7 @@ options {
         // allow-query { internals; };
 
         // Allow recursive queries to the local hosts
-       //  allow-recursion { internals; };
+         allow-recursion { internals; };
 
         // Do not make public version of BIND
         version none;

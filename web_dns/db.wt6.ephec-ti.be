@@ -1,6 +1,6 @@
 $TTL 21600 ; 6 heures
 $ORIGIN wt6.ephec-ti.be.
-@	IN SOA ns.wt6.ephec-ti.be admin.wt6.ephec-ti.be. (
+@	IN SOA ns.wt6.ephec-ti.be. admin.wt6.ephec-ti.be. (
 					2019031901 ; serial
 					3600 ; refresh 1heure
 					3000 ; retry 50min
