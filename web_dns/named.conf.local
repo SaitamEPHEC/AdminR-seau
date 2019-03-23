@@ -8,7 +8,7 @@ view external {
 
 	zone "126.147.77.51.in-addr.arpa" {
 		type master;
-		file "etc/bind/db.126.147.77.51"
+		file "etc/bind/db.126.147.77.51";
 	};
 };
 
