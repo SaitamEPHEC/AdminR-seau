@@ -10,3 +10,4 @@ $ORIGIN wt6.ephec-ti.be.
 ;
 @ IN NS ns.wt6.ephec-ti.be.
 ns IN A 51.77.147.126
+www IN A 51.77.147.126
