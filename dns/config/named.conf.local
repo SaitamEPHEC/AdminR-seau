@@ -11,8 +11,8 @@ view internal {
         type master;
         file "/etc/bind/db.internal.wt6.ephec-ti.be";
         allow-transfer {213.251.128.136;};
-    }
-}
+    };
+};
 
 view external {
 

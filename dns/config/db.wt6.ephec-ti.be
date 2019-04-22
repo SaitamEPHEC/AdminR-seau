@@ -1,3 +1,4 @@
+; wt6.ephec-ti.be
 $TTL 21600 ; 6 heures
 $ORIGIN wt6.ephec-ti.be.
 @ IN SOA ns.wt6.ephec-ti.be. admin.wt6.ephec-ti.be. (
@@ -8,6 +9,13 @@ $ORIGIN wt6.ephec-ti.be.
                                         604800 ; minimum 1 semaine
                                         )
 ;
+; NAMESERVERS 
+;
 @ IN NS ns.wt6.ephec-ti.be.
-ns IN A 51.77.147.126
+@ IN NS ns.ovh.net
+
+;
+; Nodes in domain
+;
+@ IN A 51.77.147.126
 www IN A 51.77.147.126
