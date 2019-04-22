@@ -9,7 +9,8 @@ view internal {
     allow-recursion { internals; };
     zone "wt6.ephec-ti.be" {
         type master;
-        file "/etc/bind/db.erp.wt6.ephec-ti.be";
+        file "/etc/bind/db.internal.wt6.ephec-ti.be";
+        allow-transfer {213.251.128.136;};
     }
 }
 
@@ -17,8 +18,11 @@ view external {
 
     match-clients { any; };
 
-    zone "wt6.ephec-ti.be" IN {
+    zone "wt6.ephec-ti.be" {
         type master;
         file "/etc/bind/db.wt6.ephec-ti.be";
+        allow-transfer {213.251.128.136;};
+        allow-query{any;};
+        notify yes;
     };
 };
