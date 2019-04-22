@@ -17,5 +17,6 @@ $ORIGIN wt6.ephec-ti.be.
 ;
 ; Nodes in domain
 ;
+ns IN A 51.77.147.126
 @ IN A 51.77.147.126
 www IN A 51.77.147.126
