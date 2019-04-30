@@ -9,4 +9,4 @@ $ORIGIN 126.147.77.51.in-addr.arpa.
                                 )
 
 @               IN      NS       ns.wt6.ephec-ti.be.
-1               IN      PTR      wt6.ephec-ti.be.
+1 IN PTR wt6.ephec-ti.be.

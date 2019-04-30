@@ -12,7 +12,6 @@ $ORIGIN wt6.ephec-ti.be.
 ; NAMESERVERS 
 ;
 @ IN NS ns.wt6.ephec-ti.be.
-@ IN NS ns.ovh.net
 
 ;
 ; Nodes in domain
