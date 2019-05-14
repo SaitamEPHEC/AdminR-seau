@@ -16,6 +16,9 @@ $ORIGIN wt6.ephec-ti.be.
 ;
 ; Nodes in domain
 ;
+webServer IN A 51.77.147.119
 ns IN A 51.77.147.119
 @ IN A 51.77.147.119
-www IN A 51.77.147.119
+www IN CNAME webServer    
+b2b IN CNAME webServer
+
