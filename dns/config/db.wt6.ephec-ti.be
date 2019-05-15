@@ -12,13 +12,18 @@ $ORIGIN wt6.ephec-ti.be.
 ; NAMESERVERS 
 ;
 @ IN NS ns.wt6.ephec-ti.be.
-
+@ IN MX 10 mail
 ;
 ; Nodes in domain
 ;
 webServer IN A 51.77.147.119
 ns IN A 51.77.147.119
 @ IN A 51.77.147.119
-www IN CNAME webServer    
+www IN CNAME webServer
 b2b IN CNAME webServer
 
+; mail services
+mail IN A 51.77.147.172
+smtp IN CNAME mail
+pop3 IN CNAME mail
+imap IN CNAME mail
