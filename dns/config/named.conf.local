@@ -12,7 +12,7 @@ view internal {
 
     zone "wt6.ephec-ti.be" {
         type master;
-        file "/etc/bind/db.erp.wt6.ephec-ti.be";
+        file "/etc/bind/db.internal.wt6.ephec-ti.be";
     };
 };
 

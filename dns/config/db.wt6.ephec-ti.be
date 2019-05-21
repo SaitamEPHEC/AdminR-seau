@@ -28,3 +28,5 @@ mail IN A 51.77.147.172
 smtp IN CNAME mail
 pop3 IN CNAME mail
 imap IN CNAME mail
+_imaps._tcp IN SRV 1 1 993 mail.wt6.ephec-ti.be.
+_submission._tcp IN SRV 1 1 587 mail.wt6.ephec-ti.be.
