@@ -12,7 +12,8 @@ $ORIGIN wt6.ephec-ti.be.
 ; NAMESERVERS 
 ;
 @ IN NS ns.wt6.ephec-ti.be.
-@ IN MX 10 mail
+@ IN MX 1 mail
+@ IN TXT "v=spf1 include:mail.wt6.ephec-ti.be ip4.51.44.147.172 -all"
 ;
 ; Nodes in domain
 ;
