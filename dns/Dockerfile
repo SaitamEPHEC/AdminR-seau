@@ -1,10 +1,10 @@
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get install -y bind9
+RUN apt-get update && apt-get install -y bind9 nano
 
 WORKDIR /etc/bind
 
-EXPOSE 53/tcp 53/udp
+EXPOSE 53 53/udp
 
 VOLUME /etc/bind
 

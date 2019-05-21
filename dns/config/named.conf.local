@@ -1,30 +1,23 @@
-acl "internals" {
-    51.77.147.119;
-    51.77.147.126;
-    localhost;
+acl company {
+	51.77.147.119;
+	51.77.147.126;
+	localhost;
 };
 
 view internal {
-
-    match-clients { internals; };
+    match-clients { company; };
     recursion yes;
-    allow-recursion { internals; };
-
+    allow-recursion { company; };
     zone "wt6.ephec-ti.be" {
         type master;
-        file "/etc/bind/db.erp.wt6.ephec-ti.be";
+        file "/etc/bind/db.internal.wt6.ephec-ti.be";
     };
 };
 
 view external {
-
     match-clients { any; };
-
     zone "wt6.ephec-ti.be" {
         type master;
         file "/etc/bind/db.wt6.ephec-ti.be";
-        allow-transfer {213.251.128.136;};
-        allow-query{any;};
-        notify yes;
     };
 };
