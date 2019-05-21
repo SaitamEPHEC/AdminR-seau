@@ -18,6 +18,7 @@ ns IN A 51.77.147.119
 webServer IN A 51.77.147.119
 www IN CNAME webServer
 b2b IN CNAME webServer
+intranet IN CNAME webServer
 
 ; mail services
 mail IN A 51.77.147.172
@@ -26,3 +27,4 @@ pop3 IN CNAME mail
 imap IN CNAME mail
 _imaps._tcp IN SRV 1 1 993 mail.wt6.ephec-ti.be.
 _submission._tcp IN SRV 1 1 587 mail.wt6.ephec-ti.be.
+
