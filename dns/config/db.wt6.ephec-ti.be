@@ -17,7 +17,7 @@ ns IN A 51.77.147.119
 @ IN A 51.77.147.119
 webServer IN A 51.77.147.119
 www IN CNAME webServer
-b2b IN CNAME webServer
+b2b IN A 51.77.147.119
 
 ; mail services
 mail IN A 51.77.147.172
