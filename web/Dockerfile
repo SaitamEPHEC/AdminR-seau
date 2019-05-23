@@ -12,13 +12,13 @@ RUN apt update \
 RUN a2enmod ssl
 
 # Modification du fichier apache2.conf
-COPY apache2.conf /etc/apache2/apache2.conf
+ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/apache2.conf /etc/apache2/apache2.conf
 
 # Mettre les fichiers de configuration des sites dans sites-available
 #COPY wt6.ephec-ti.be.conf /etc/apache2/sites-available/
 ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/wt6.ephec-ti.be.conf /etc/apache2/sites-available/
-COPY b2b.wt6.ephec-ti.be.conf /etc/apache2/sites-available/
-COPY int.wt6.ephec-ti.be.conf /etc/apache2/sites-available/
+ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/b2b.wt6.ephec-ti.be.conf /etc/apache2/sites-available/
+ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/int.wt6.ephec-ti.be.conf /etc/apache2/sites-available/
 
 # Mettre les fichiers de configuration des sites dans sites-enabled
 RUN ln -s /etc/apache2/sites-available/wt6.ephec-ti.be.conf /etc/apache2/sites-enabled/
@@ -31,9 +31,9 @@ RUN mkdir -p /var/www/b2b.wt6.ephec-ti.be
 RUN mkdir -p /var/www/int.wt6.ephec-ti.be
 
 # Placer les sites web dans /var/www
-COPY vitrine.html /var/www/wt6.ephec-ti.be/index.html
-COPY b2b.php /var/www/b2b.wt6.ephec-ti.be/index.php
-COPY int.php /var/www/int.wt6.ephec-ti.be/index.php
+ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/vitrine.html /var/www/wt6.ephec-ti.be/index.html
+ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/b2b.php /var/www/b2b.wt6.ephec-ti.be/index.php
+ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/int.php /var/www/int.wt6.ephec-ti.be/index.php
 
 # Création des répertoires pour les certificats HTTPS 
 RUN mkdir -p /etc/letsencrypt/wt6.ephec-ti.be
@@ -41,17 +41,17 @@ RUN mkdir -p /etc/letsencrypt/b2b.wt6.ephec-ti.be
 
 # Copie des certificats dans le répertoire adéquat
 # Pour wt6.ephec-ti.be
-COPY wt6/cert.pem /etc/letsencrypt/wt6.ephec-ti.be/
-COPY wt6/privkey.pem /etc/letsencrypt/wt6.ephec-ti.be/
-COPY wt6/chain.pem /etc/letsencrypt/wt6.ephec-ti.be/
-COPY wt6/fullchain.pem /etc/letsencrypt/wt6.ephec-ti.be/
-COPY options-ssl-apache.conf /etc/letsencrypt/
+ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/wt6/cert.pem /etc/letsencrypt/wt6.ephec-ti.be/
+ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/wt6/privkey.pem /etc/letsencrypt/wt6.ephec-ti.be/
+ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/wt6/chain.pem /etc/letsencrypt/wt6.ephec-ti.be/
+ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/wt6/fullchain.pem /etc/letsencrypt/wt6.ephec-ti.be/
+ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/options-ssl-apache.conf /etc/letsencrypt/
 
 # Pour b2b.ephec-ti.be
-COPY b2b/cert.pem /etc/letsencrypt/b2b.wt6.ephec-ti.be/
-COPY b2b/privkey.pem /etc/letsencrypt/b2b.wt6.ephec-ti.be/
-COPY b2b/chain.pem /etc/letsencrypt/b2b.wt6.ephec-ti.be/
-COPY b2b/fullchain.pem /etc/letsencrypt/b2b.wt6.ephec-ti.be/
+ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/b2b/cert.pem /etc/letsencrypt/b2b.wt6.ephec-ti.be/
+ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/b2b/privkey.pem /etc/letsencrypt/b2b.wt6.ephec-ti.be/
+ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/b2b/chain.pem /etc/letsencrypt/b2b.wt6.ephec-ti.be/
+ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/b2b/fullchain.pem /etc/letsencrypt/b2b.wt6.ephec-ti.be/
 
 # Exposer les ports
 EXPOSE 80 443
