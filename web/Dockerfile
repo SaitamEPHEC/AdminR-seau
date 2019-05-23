@@ -53,6 +53,10 @@ ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/b2b/pri
 ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/b2b/chain.pem /etc/letsencrypt/b2b.wt6.ephec-ti.be/
 ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/b2b/fullchain.pem /etc/letsencrypt/b2b.wt6.ephec-ti.be/
 
+RUN chmod 644 /var/www/wt6.ephec-ti.be/index.html
+RUN chmod 644 /var/www/b2b.wt6.ephec-ti.be/index.php
+RUN chmod 644 /var/www/int.wt6.ephec-ti.be/index.php
+
 # Exposer les ports
 EXPOSE 80 443
 
