@@ -15,7 +15,8 @@ RUN a2enmod ssl
 COPY apache2.conf /etc/apache2/apache2.conf
 
 # Mettre les fichiers de configuration des sites dans sites-available
-COPY wt6.ephec-ti.be.conf /etc/apache2/sites-available/
+#COPY wt6.ephec-ti.be.conf /etc/apache2/sites-available/
+ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/wt6.ephec-ti.be.conf /etc/apache2/sites-available/
 COPY b2b.wt6.ephec-ti.be.conf /etc/apache2/sites-available/
 COPY int.wt6.ephec-ti.be.conf /etc/apache2/sites-available/
 
