@@ -1,0 +1,12 @@
+
+version: '2'
+
+
+services:
+  web:
+    image: saitam/web:latest
+    container_name: web
+    restart: always
+    ports:
+      - "80:80/tcp"
+      - "443:443/tcp"
