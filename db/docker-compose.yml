@@ -9,3 +9,11 @@ services:
     networks:
       db:
         ipv4_address: 172.16.0.20
+
+networks:
+  db:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.0.0/26
