@@ -1,0 +1,19 @@
+version: '2'
+
+
+services:
+  database:
+    image: saitam/db:latest
+    container_name: db
+    restart: always
+    networks:
+      db:
+        ipv4_address: 172.16.0.20
+
+networks:
+  db:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.0.0/26
