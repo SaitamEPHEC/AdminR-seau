@@ -1,4 +1,3 @@
-<?php require("injectToWeb.php"); ?>
 <!DOCTYPE html>
 <html>
 	<head>
