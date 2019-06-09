@@ -1,4 +1,4 @@
-//<?php require("injectToWeb.php"); ?>
+<?php require("injectToWeb.php"); ?>
 <!DOCTYPE html>
 <html>
 	<head>
