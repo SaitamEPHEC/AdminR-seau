@@ -1,7 +1,7 @@
 <?php 
 
 function connect(){
-	$servername = "172.19.45.175";
+	$servername = "172.16.0.20";
 	$username = "admin";
 	$password = "root";
 	try {
