@@ -2,7 +2,7 @@
 
 function getProduits() {
 
-	$connection = getConnection();
+	$connection = connect();
 
 	$req = $connection->prepare('SELECT * FROM CLIENT');
 	$req->execute();
