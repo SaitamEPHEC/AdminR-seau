@@ -24,10 +24,10 @@ smtpd_use_tls=yes
 smtpd_tls_security_level = may
 smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
 
-smtpd_tls_cert_file=/etc/letsencrypt/live/example.com/fullchain.pem
-smtpd_tls_key_file=/etc/letsencrypt/live/example.com/privkey.pem
+smtpd_tls_cert_file=/etc/letsencrypt/live/wt6.ephec-ti.be.crt
+smtpd_tls_key_file=/etc/letsencrypt/live/wt6.ephec-ti.be.key
 
-myhostname = mail.example.com
+myhostname = mail.wt6.ephec-ti.be
 myorigin = /etc/mailname
 mydestination =  localhost.$mydomain, localhost
 relayhost = 
