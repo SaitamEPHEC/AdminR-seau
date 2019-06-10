@@ -1,9 +1,9 @@
-version: '1'
+version: '3'
 
 services:
  mail:
-  image: saitam/mail:latest
-  container_mail: mail
+  image: mail:latest
+  container_name: mail
   restart: always
   ports:
    - "25:25/tcp"
