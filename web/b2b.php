@@ -1,4 +1,4 @@
-<?php require("SQLConnection.php"); ?>
+<?php require("injectToWeb.php"); ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,7 +10,7 @@
 		<h3>Présentation</h3>
 			<p>Nous vendons tous types de jouets. N'hésitez pas à consulter la liste de nos jouets!</p>
 		<h3>Ajoutez un Jouet</h3>
-		//<form method="post" action="injectToSQL.php">
+		<form method="post" action="injectToSQL.php">
 			<p>
 		  			Numéro de Produit :<br>
 		  			<input type="text" name="npro" value="" required><br><br>
@@ -26,8 +26,8 @@
 
 					<input type="submit" value="Valider">
 			</p>
-	        //</form>
+	        </form>
 		<h3> Liste de nos Jouets </h3>
-		//<?= getProduits(); ?>
+		<?= getProduits(); ?>
 	</body>
 </html>
