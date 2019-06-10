@@ -2,7 +2,7 @@ version: '1'
 
 services:
  mail:
-  image: saitam/mail:latest
+  image: mail:latest
   container_mail: mail
   restart: always
   ports:
