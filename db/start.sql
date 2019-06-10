@@ -1,5 +1,8 @@
-CREATE USER 'admin'@'localhost' IDENTIFIED BY 'root';
-GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost';
+CREATE user 'web'@172.16.0.20 identified by 'root';
+CREATE user 'admin'@'localhost' IDENTIFIED BY 'root';
+grant all privileges on *.* TO 'web'@172.16.0.20;
+grant all privileges on *.* TO 'admin'@'localhost';
+
 CREATE DATABASE db;
 USE db;
 

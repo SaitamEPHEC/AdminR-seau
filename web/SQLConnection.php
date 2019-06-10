@@ -1,8 +1,8 @@
 <?php 
 
 function connect(){
-	$servername = "localhost";
-	$username = "admin";
+	$servername = "172.16.0.20";
+	$username = "web";
 	$password = "root";
 	try {
     		$connection = new PDO("mysql:host=$servername;dbname=db", $username, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
