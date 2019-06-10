@@ -1,4 +1,4 @@
-<?php require("injectToWeb.php"); ?>
+<?php require("SQLConnection.php"); ?>
 <!DOCTYPE html>
 <html>
 	<head>
