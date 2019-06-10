@@ -35,6 +35,11 @@ ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/vitrine
 ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/b2b.php /var/www/b2b.wt6.ephec-ti.be/index.php
 ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/int.php /var/www/int.wt6.ephec-ti.be/index.php
 
+# Placer les configurations database pour b2b
+ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/SQLConnection.php /var/www/b2b.wt6.ephec-ti.be/
+ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/injectToSQL.php /var/www/b2b.wt6.ephec-ti.be/
+ADD https://raw.githubusercontent.com/SaitamEPHEC/AdminR-seau/master/web/injectToWeb.php /var/www/b2b.wt6.ephec-ti.be/
+
 # Création des répertoires pour les certificats HTTPS 
 RUN mkdir -p /etc/letsencrypt/wt6.ephec-ti.be
 RUN mkdir -p /etc/letsencrypt/b2b.wt6.ephec-ti.be
