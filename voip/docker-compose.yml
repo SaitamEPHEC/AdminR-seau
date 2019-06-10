@@ -1,1 +1,20 @@
-.
+version: '3'
+
+services:
+    voip:
+     image: voip:latest
+     container_name: voip
+     restart: always
+     ports:
+       - "5060:5060/udp"
+       - "5060:5060/tcp"
+       - "10000-11000:10000-11000/udp"
+
+    volumes:
+      - ./config/extensions.conf:/etc/asterisk/extensions.conf
+      - ./config/sip.conf:/etc/asterisk/sip.conf
+      - ./config/users.conf:/etc/asterisk/users.conf
+      - ./config/voicemail.conf:/etc/asterisk/voicemail.conf
+      - ./config/iax.conf:/etc/asterisk/iax.conf
+
+
