@@ -1,5 +1,4 @@
-
-version: '2'
+version: '2
 
 
 services:
@@ -10,3 +9,23 @@ services:
     ports:
       - "80:80/tcp"
       - "443:443/tcp"
+    networks:
+      db:
+        ipv4_address: 172.16.0.1
+
+  database:
+    image: saitam/db:latest
+    container_name: db
+    restart: always
+    networks:
+      db:
+        ipv4_address: 172.16.0.20
+
+networks:
+  db:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.0.0/26
+
