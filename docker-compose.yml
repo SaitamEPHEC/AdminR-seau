@@ -1,4 +1,4 @@
-version: '2
+version: '2'
 
 
 services:
@@ -11,7 +11,7 @@ services:
       - "443:443/tcp"
     networks:
       db:
-        ipv4_address: 172.16.0.1
+        ipv4_address: 172.16.0.3
 
   database:
     image: saitam/db:latest
@@ -19,7 +19,7 @@ services:
     restart: always
     networks:
       db:
-        ipv4_address: 172.16.0.20
+        ipv4_address: 172.16.0.2
 
 networks:
   db:
@@ -27,5 +27,5 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 172.16.0.0/26
+        - subnet: 172.16.0.0/28
 
