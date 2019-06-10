@@ -23,6 +23,7 @@ COPY main.cf /etc/postfix/main.cf
 COPY master.cf /etc/postfix/master.cf
 COPY start.sh /etc/start.sh
 COPY virtual_mailbox_domains /etc/postfix/virtual_mailbox_domains
+COPY mailname /etc/mailname
 
 RUN postmap /etc/postfix/virtual_mailbox_domains
 
