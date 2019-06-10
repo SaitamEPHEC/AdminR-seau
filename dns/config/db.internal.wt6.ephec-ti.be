@@ -10,7 +10,7 @@ $ORIGIN wt6.ephec-ti.be.
                                         )
 @ IN NS ns.wt6.ephec-ti.be.
 @ IN MX 1 mail
-@ IN TXT "v=spf1 include:mail.wt6.ephec-ti.be ip4.51.44.147.172 -all"
+@ IN TXT "v=spf1 include:mail.wt6.ephec-ti.be ip4.51.77.147.172 -all"
 
 ; web server
 ns IN A 51.77.147.119
@@ -22,9 +22,7 @@ b2b IN A 51.77.147.119
 
 ; mail services
 mail IN A 51.77.147.172
-smtp IN CNAME mail
-pop3 IN CNAME mail
-imap IN CNAME mail
+
 _imaps._tcp IN SRV 1 1 993 mail.wt6.ephec-ti.be.
 _submission._tcp IN SRV 1 1 587 mail.wt6.ephec-ti.be.
 
