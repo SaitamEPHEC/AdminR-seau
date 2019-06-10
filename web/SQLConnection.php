@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function connect(){
 	$servername = "172.16.0.2";
